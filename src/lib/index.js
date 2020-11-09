@@ -15,6 +15,10 @@ export const isSymbol =(target)=>{
   return Object.prototype.toString.call(target) === '[object Symbol]'
 }
 
+export const isFunction =(target)=>{
+  return Object.prototype.toString.call(target) === '[object Function]'
+}
+
 export const isInteger =(target)=>{
   return parseInt(target, 10) === target
 }
@@ -24,5 +28,5 @@ export const hasOwn =(target,key)=>{
 }
 // 新值和老值进行对比
 export const hasChange =(value,oldValue)=>{
-  return  value === oldValue
+  return  value !== oldValue
 }
